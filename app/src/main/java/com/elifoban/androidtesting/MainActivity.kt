@@ -16,5 +16,13 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+        val tax = Tax()
+        val netIncome = tax.calculateIncome(100.0,0.1)
+        val netTax = tax.calculateTax(100.0,0.1)
+
+        println(netIncome)
+        println(netTax)
     }
 }
