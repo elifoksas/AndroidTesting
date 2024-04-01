@@ -13,6 +13,12 @@ class TestTax {
 
 
     }
+    @Test
+    fun calculateIncomeTest(){
+        val tax = Tax()
+        val netIncome = tax.calculateIncome(200.0,0.2)
+        assertThat(netIncome).isEqualTo(160)
+    }
 
 
 }
