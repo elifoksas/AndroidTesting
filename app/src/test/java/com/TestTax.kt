@@ -2,6 +2,7 @@ package com
 
 import com.elifoban.androidtesting.Tax
 import com.google.common.truth.Truth.assertThat
+import org.junit.After
 import org.junit.Before
 import org.junit.Test
 
@@ -13,6 +14,11 @@ class TestTax {
         //This runs before the tests run
 
         tax = Tax()
+    }
+
+    @After
+    fun teardown(){
+        //runs after tests are finished
     }
     @Test
     fun calculateTaxTest(){
